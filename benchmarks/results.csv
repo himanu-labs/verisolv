@@ -1,0 +1,12 @@
+problem,method,impl,runtime_s,max_error,nfev
+exp_decay,rk45,ours,1.017252200e-02,8.704708582e-08,248
+exp_decay,rk4,ours,3.235388000e-03,3.332410561e-07,400
+exp_decay,rk45,scipy,4.535966000e-03,9.929345868e-08,248
+harmonic,rk45,ours,2.517389300e-02,2.489962560e-06,728
+harmonic,rk4,ours,6.970873001e-03,2.531937201e-04,400
+harmonic,rk45,scipy,1.804719200e-02,2.502376108e-06,716
+lotka_volterra,rk45,ours,5.377013200e-02,4.019299275e-04,1400
+lotka_volterra,rk4,ours,7.831124001e-03,5.416380072e+00,400
+lotka_volterra,rk45,scipy,4.494994400e-02,3.886305726e-04,1394
+robertson_stiff,bdf,ours,1.559646761e+00,1.654913756e-06,20058
+robertson_stiff,bdf,scipy,6.579762200e-02,6.872450570e-07,329

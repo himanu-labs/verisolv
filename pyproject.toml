@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "verisolv-solver"
+version = "0.1.0"
+description = "A numerical ODE/PDE solver core with an optional Rust kernel and a Lean-verified Euler convergence proof."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "verisolv" }]
+keywords = ["ode", "pde", "numerical", "runge-kutta", "solver", "rust", "lean"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "matplotlib"]
+bench = ["matplotlib"]
+
+# The importable package is `solver`, living under the `python_solver/` source
+# root (so `python_solver/solver/...` -> `import solver`). The compiled Rust
+# extension `solver_core` is built and installed separately via maturin from
+# `rust_core/`; it is an optional accelerator, not a build dependency here.
+[tool.setuptools.packages.find]
+where = ["python_solver"]
+include = ["solver*"]
+
+[tool.pytest.ini_options]
+testpaths = ["python_solver/tests"]
+pythonpath = ["python_solver"]

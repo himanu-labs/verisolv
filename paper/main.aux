@@ -1,0 +1,95 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{demoura2021lean4}
+\citation{mathlib2020}
+\citation{pyo3}
+\citation{dormandprince1980}
+\@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\citation{dormandprince1980}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The three pillars and the contract that binds them. The contract pins the interfaces and the Euler recurrence; the Python reference, the Rust kernel, and the Lean proof each conform to it independently.}}{2}{figure.caption.4}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:arch}{{1}{2}{The three pillars and the contract that binds them. The contract pins the interfaces and the Euler recurrence; the Python reference, the Rust kernel, and the Lean proof each conform to it independently}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}System Architecture}{2}{section.2}\protected@file@percent }
+\newlabel{sec:arch}{{2}{2}{System Architecture}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Monorepo layout}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}The interface contract}{2}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Dispatch and the failure boundary}{2}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}The Numerical Solver Library}{2}{section.3}\protected@file@percent }
+\newlabel{sec:lib}{{3}{2}{The Numerical Solver Library}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}ODE integrators}{2}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Explicit Euler}{2}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Classical RK4}{2}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Dormand--Prince RK45}{2}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Adams--Bashforth 4}{3}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{BDF1/BDF2}{3}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}PDE solvers}{3}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Stability analysis}{3}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}The Rust Kernel and the Foreign-Function-Interface Boundary}{3}{section.4}\protected@file@percent }
+\newlabel{sec:rust}{{4}{3}{The Rust Kernel and the Foreign-Function-Interface Boundary}{section.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Formal Verification of Euler Convergence}{4}{section.5}\protected@file@percent }
+\newlabel{sec:lean}{{5}{4}{Formal Verification of Euler Convergence}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Setup}{4}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}The error recurrence}{4}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Discrete Grönwall}{4}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}The convergence theorem}{4}{subsection.5.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces The correspondence between executed code and proof.}}{5}{table.caption.10}\protected@file@percent }
+\newlabel{tab:bridge}{{1}{5}{The correspondence between executed code and proof}{table.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Trusting the proof}{5}{subsection.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}The Bridge}{5}{section.6}\protected@file@percent }
+\newlabel{sec:bridge}{{6}{5}{The Bridge}{section.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Maximum error, wall-clock time, and right-hand-side evaluations versus SciPy. ``ours'' denotes the verisolv solver; time is the minimum over repeated runs. Lower is better throughout.}}{5}{table.caption.11}\protected@file@percent }
+\newlabel{tab:bench}{{2}{5}{Maximum error, wall-clock time, and right-hand-side evaluations versus SciPy. ``ours'' denotes the verisolv solver; time is the minimum over repeated runs. Lower is better throughout}{table.caption.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Evaluation}{5}{section.7}\protected@file@percent }
+\newlabel{sec:eval}{{7}{5}{Evaluation}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Reproducibility}{5}{subsection.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Numerical accuracy versus SciPy}{5}{subsection.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}The verified rate, observed}{5}{subsection.7.3}\protected@file@percent }
+\citation{immler2012}
+\citation{immler2018}
+\citation{boldo2013wave}
+\citation{leroy2009}
+\citation{demoura2021lean4}
+\citation{mathlib2020}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Global error versus step size for explicit Euler and RK4 on $y'=-y$, log--log axes, with reference slopes. A least-squares fit gives empirical orders $1.02$ (Euler) and $4.04$ (RK4). The measured Euler slope of $1$ is the numerical realization of the $O(h)$ rate proved by \texttt  {euler\_global\_error\_le}.}}{6}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:convergence}{{2}{6}{Global error versus step size for explicit Euler and RK4 on $y'=-y$, log--log axes, with reference slopes. A least-squares fit gives empirical orders $1.02$ (Euler) and $4.04$ (RK4). The measured Euler slope of $1$ is the numerical realization of the $O(h)$ rate proved by \texttt {euler\_global\_error\_le}}{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Test-suite coverage}{6}{subsection.7.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.5}Reproducibility as an engineering discipline}{6}{subsection.7.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Related Work}{6}{section.8}\protected@file@percent }
+\newlabel{sec:related}{{8}{6}{Related Work}{section.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Verified numerics.}{6}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Lean and Mathlib.}{6}{section*.14}\protected@file@percent }
+\citation{scipy2020}
+\citation{pyo3}
+\bibstyle{ACM-Reference-Format}
+\bibdata{refs}
+\bibcite{boldo2013wave}{{1}{2013}{{Boldo et~al\mbox  {.}}}{{}}}
+\bibcite{demoura2021lean4}{{2}{2021}{{de~Moura and Ullrich}}{{}}}
+\bibcite{dormandprince1980}{{3}{1980}{{Dormand and Prince}}{{}}}
+\bibcite{immler2018}{{4}{2018}{{Immler}}{{}}}
+\bibcite{immler2012}{{5}{2012}{{Immler and H{\"o}lzl}}{{}}}
+\bibcite{leroy2009}{{6}{2009}{{Leroy}}{{}}}
+\bibcite{mathlib2020}{{7}{2020}{{The mathlib Community}}{{}}}
+\bibcite{pyo3}{{8}{2024}{{The PyO3 Project}}{{}}}
+\bibcite{scipy2020}{{9}{2020}{{Virtanen et~al\mbox  {.}}}{{}}}
+\@writefile{toc}{\contentsline {paragraph}{Numerical libraries.}{7}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Discussion and Future Work}{7}{section.9}\protected@file@percent }
+\newlabel{sec:future}{{9}{7}{Discussion and Future Work}{section.9}{}}
+\@writefile{toc}{\contentsline {paragraph}{Threats to validity}{7}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10}Conclusion}{7}{section.10}\protected@file@percent }
+\newlabel{sec:conclusion}{{10}{7}{Conclusion}{section.10}{}}
+\@writefile{toc}{\contentsline {section}{References}{7}{section*.19}\protected@file@percent }
+\newlabel{tocindent-1}{0pt}
+\newlabel{tocindent0}{0pt}
+\newlabel{tocindent1}{10.00003pt}
+\newlabel{tocindent2}{12.77782pt}
+\newlabel{tocindent3}{0pt}
+\newlabel{tocindent4}{0pt}
+\newlabel{tocindent5}{0pt}
+\@writefile{toc}{\contentsline {section}{\numberline {A}The Discrete Grönwall Proof in Full}{8}{appendix.A}\protected@file@percent }
+\newlabel{app:gronwall}{{A}{8}{The Discrete Grönwall Proof in Full}{appendix.A}{}}
+\newlabel{TotPages}{{8}{8}{}{page.8}{}}
+\gdef \@abspage@last{8}

@@ -1,0 +1,27 @@
+[package]
+name = "solver_core"
+version = "0.1.0"
+edition = "2021"
+description = "Rust numerical core (RK4, Dormand-Prince RK45, BDF1, finite differences) for the `solver` package."
+license = "MIT"
+
+[lib]
+name = "solver_core"
+# `cdylib` builds the Python extension module; `rlib` lets `cargo test` link the
+# crate natively so the `*_core` unit tests run without a Python interpreter.
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+ndarray = "0.16"
+
+[dependencies.pyo3]
+version = "0.22"
+features = ["extension-module", "abi3-py310"]
+
+[dependencies.numpy]
+version = "0.22"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

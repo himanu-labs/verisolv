@@ -1,0 +1,20 @@
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "solver_core"
+version = "0.1.0"
+description = "Rust numerical core (RK4, Dormand-Prince RK45, BDF1, finite differences) for the `solver` package."
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.maturin]
+# Builds the `solver_core` extension module (abi3, single wheel for py3.10+).
+module-name = "solver_core"
+features = ["pyo3/extension-module"]
+strip = true
