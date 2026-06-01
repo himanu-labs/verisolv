@@ -3,7 +3,7 @@
 
 Title:   verisolv: A Unified Artifact Bridging a Numerical ODE/PDE Solver
          and a Machine-Checked Convergence Proof
-Author:  Anubhav Prasai <anubhavprasai123@gmail.com>
+Authors: Anubhav Prasai <anubhavprasai123@gmail.com>, Himangsu Adhikari <himangsuadk@gmail.com>
 
 Build:   PDFLaTeX (the document class is ACM acmart, sigplan mode, which ships
          with TeX Live and is available on arXiv).

@@ -77,10 +77,16 @@ Machine-Checked Convergence Proof}
 \author{Anubhav Prasai}
 \affiliation{%
   \institution{AIYGO}
-  \city{}
   \country{}
 }
 \email{anubhavprasai123@gmail.com}
+
+\author{Himangsu Adhikari}
+\affiliation{%
+  \institution{AIYGO}
+  \country{}
+}
+\email{himangsuadk@gmail.com}
 
 \begin{abstract}
 Numerical software for differential equations is trusted on the strength of
@@ -210,7 +216,6 @@ validate every pillar from a clean checkout (\S\ref{sec:eval}).
     node[below=1pt, font=\footnotesize]{same recurrence} (ln);
 \end{tikzpicture}%
 }
-\Description{Architecture diagram with a top contract node labeled docs/CONTRACT.md connected by arrows to three pillar nodes below: Python solver (5 ODE, 2 PDE), Rust solver\_core (PyO3 kernel), and Lean 4 ODE (O(h) proof). Dashed edges mark the FFI boundary between Python and Rust and the shared-recurrence link between Python and Lean.}
 \caption{The three pillars and the contract that binds them. The contract pins
 the interfaces and the Euler recurrence; the Python reference, the Rust kernel,
 and the Lean proof each conform to it independently. The dashed FFI
@@ -616,7 +621,6 @@ Robertson (stiff)& BDF (scipy)  & $6.87\times10^{-7}$ & $0.066$ & 329\\
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.82\columnwidth]{convergence.pdf}
-\Description{Log-log plot of global error versus step size for explicit Euler and classical RK4 on the test problem y prime equals negative y. Two data series are shown with least-squares fitted lines: Euler with slope approximately 1 confirming first-order convergence, and RK4 with slope approximately 4 confirming fourth-order convergence. Dashed reference lines of slope 1 and slope 4 are overlaid.}
 \caption{Global error versus step size for explicit Euler and RK4 on
 $y'=-y$, log--log axes, with reference slopes. A least-squares fit gives empirical
 orders $1.02$ (Euler) and $4.04$ (RK4). The measured Euler slope of $1$ is the

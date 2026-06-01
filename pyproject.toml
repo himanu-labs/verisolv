@@ -9,7 +9,10 @@ description = "A numerical ODE/PDE solver core with an optional Rust kernel and 
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "Anubhav Prasai", email = "anubhavprasai123@gmail.com" }]
+authors = [
+    { name = "Anubhav Prasai", email = "anubhavprasai123@gmail.com" },
+    { name = "Himangsu Adhikari", email = "himangsuadk@gmail.com" }
+]
 keywords = ["ode", "pde", "numerical", "runge-kutta", "solver", "rust", "lean"]
 classifiers = [
     "Programming Language :: Python :: 3",
