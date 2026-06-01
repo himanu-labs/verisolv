@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1780284565.77002 "main.aux" "main.bbl" "main" 1780284568.45304 0
+["bibtex main"] 1780287706.9845 "main.aux" "main.bbl" "main" 1780287708.94147 0
   "./refs.bib" 1780284252.72241 3179 1afe101ee2a6568c77d0ac1c763f0985 ""
   "/usr/share/texmf-dist/bibtex/bst/acmart/ACM-Reference-Format.bst" 1775415801 93560 12e0ced1522ea2bfa9b2fb12855c7e9e ""
-  "main.aux" 1780284568.05514 8746 60b624d0345fd207b850b8c220d9c504 "pdflatex"
+  "main.aux" 1780287708.67712 8910 7310ff77e616bddacea1d8a2919f6fbf "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1780284565.8087 "main.tex" "main.pdf" "main" 1780284568.45358 0
+["pdflatex"] 1780287707.0127 "main.tex" "main.pdf" "main" 1780287708.94172 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1775415801 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1775415801 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1775415801 1004 54797486969f23fa377b128694d548df ""
@@ -63,6 +63,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1775415801 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1775415801 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1775415801 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb" 1775415801 24457 5cbb7bdf209d5d1ce9892a9b80a307cc ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb" 1775415801 24420 52dbb8e8aa0069a1b987309557f8d303 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1775415801 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1775415801 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
@@ -243,10 +244,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1775929603 325717 59a65e600f662ceace641c3ea8b5d4af ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1775929585 2328186 644d0424d80a75a1a6542b0435e7f1f9 ""
   "convergence.pdf" 1780264862.92972 17570 87cb8ec4fc79c832a4e92492340cd8a4 ""
-  "main.aux" 1780284568.05514 8746 60b624d0345fd207b850b8c220d9c504 "pdflatex"
-  "main.bbl" 1780284565.79714 6582 502ec8e345b0d1cb1fe149581dfe5d7d "bibtex main"
-  "main.out" 1780284568.05614 5234 8af4cef917e31683d9f8c9a70598f5b5 "pdflatex"
-  "main.tex" 1780284503.55699 41575 f1a9055265c664540db8d99a14bed225 ""
+  "main.aux" 1780287708.67712 8910 7310ff77e616bddacea1d8a2919f6fbf "pdflatex"
+  "main.bbl" 1780287707.00411 6582 502ec8e345b0d1cb1fe149581dfe5d7d "bibtex main"
+  "main.out" 1780287708.67912 5234 8af4cef917e31683d9f8c9a70598f5b5 "pdflatex"
+  "main.tex" 1780287498.99973 41905 98ae4ecc44a28a14a76939c5aad7052b ""
   (generated)
   "main.aux"
   "main.log"

@@ -45,33 +45,29 @@ the Rust fast path and the Lean proof respectively.
 
 ## Build & test
 
+The artifact builds and validates with **four commands** — `pip install`,
+`pytest`, `cargo test`, and `lake build` — plus an optional fifth step that
+builds the Rust accelerator.
+
 **1. Create the environment and install the package (editable, with dev + bench extras):**
 
 ```bash
 python -m venv .venv && . .venv/bin/activate && pip install -e ".[dev,bench]"
 ```
 
-**2. Run the test suite:**
+**2. Run the Python test suite:**
 
 ```bash
 pytest
 ```
 
-**3. (Optional) Build the Rust core, then re-run the tests to exercise it:**
+**3. Test the Rust kernels (no Python interpreter needed):**
 
 ```bash
-cd rust_core && maturin develop --release
+cd rust_core && cargo test
 ```
 
-After this, `RUST_AVAILABLE` is `True`, `solve_ivp(..., use_rust=True)` routes
-`rk4`/`rk45` through the compiled kernel, and re-running `pytest` (from the repo
-root) additionally checks that the Rust and Python `rk4` results agree:
-
-```bash
-pytest
-```
-
-**4. (Optional) Build the Lean proof:**
+**4. Build and check the Lean proof:**
 
 ```bash
 cd lean && lake exe cache get && lake build
@@ -81,7 +77,20 @@ cd lean && lake exe cache get && lake build
 `ODE/EulerConvergence.lean` is compiled locally (skipping it forces a multi-hour
 from-source Mathlib build). `lake build` then checks `ODE/EulerConvergence.lean`
 — the formal `O(h)` convergence theorem for the Euler recurrence used in
-`solver/methods/euler.py`.
+`solver/methods/euler.py` — and runs `#print axioms`, which reports dependence
+only on `propext`, `Classical.choice`, and `Quot.sound` (the proof-hole axiom
+`sorryAx` is absent).
+
+**5. (Optional) Build the Rust accelerator and re-run the tests to exercise it:**
+
+```bash
+cd rust_core && maturin develop --release
+pytest   # from the repo root
+```
+
+After this, `RUST_AVAILABLE` is `True`, `solve_ivp(..., use_rust=True)` routes
+`rk4`/`rk45` through the compiled kernel, and re-running `pytest` additionally
+checks that the Rust and Python `rk4` results agree bit-for-bit.
 
 ## Quick start
 
