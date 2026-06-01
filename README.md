@@ -23,6 +23,7 @@ verisolv/
 │   ├── solver/             # importable package: ivp, methods/, pde/, utils/, core_bindings/
 │   └── tests/              # pytest suite (ODE accuracy, PDE stability)
 ├── rust_core/              # crate `solver_core` — PyO3 + maturin extension
+├── wasm_solver/            # crate `verisolv-wasm` — browser-native WASM bindings
 ├── benchmarks/             # compare_scipy.py — our solvers vs scipy.integrate
 └── lean/                   # Lean 4 + Mathlib: ODE/EulerConvergence.lean
 ```
@@ -91,6 +92,17 @@ pytest   # from the repo root
 After this, `RUST_AVAILABLE` is `True`, `solve_ivp(..., use_rust=True)` routes
 `rk4`/`rk45` through the compiled kernel, and re-running `pytest` additionally
 checks that the Rust and Python `rk4` results agree bit-for-bit.
+
+**6. (Optional) Build the browser-native WASM solver:**
+
+```bash
+cd wasm_solver && wasm-pack build --target web --out-dir pkg --release
+```
+
+The generated `pkg/` exposes a `wasm-bindgen` `OdeSystem` class. It parses ODE
+right-hand-side expressions once, then runs RK4 steps inside WebAssembly using
+the pure Rust verisolv kernel, so browser apps do not need a Python extension or
+a per-derivative JavaScript callback.
 
 ## Quick start
 

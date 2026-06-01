@@ -15,6 +15,7 @@ venv/
 
 # ---- Rust ----
 rust_core/target/
+wasm_solver/target/
 target/
 **/*.rs.bk
 
