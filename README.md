@@ -125,3 +125,8 @@ oscillator, Lotka–Volterra, and a stiff problem, writing `benchmarks/results.c
 ```bash
 python benchmarks/compare_scipy.py
 ```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
